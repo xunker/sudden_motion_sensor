@@ -1,0 +1,37 @@
+# sudden-motion-sensor
+
+This gem reads data from the sudden motion sensor inside most Intel-based Macbooks and Macbook Pros and some late model Powerbooks.  Returns the data in a 3-axis array of integers representing orientation along the X and Y axis and relative acceleration along the Z axis.
+
+Based in part on code from http://fazibear.blogspot.com/2008/12/process-mac-sudden-motion-sensor-with.html.
+
+More Info: http://en.wikipedia.org/wiki/Sudden_Motion_Sensor
+
+Installation:
+
+  sudo gem install xunker-sudden_motion_sensor
+
+Usage:
+
+  require 'rubygems'
+  require 'lib/sudden_motion_sensor'
+
+  100.times do
+    x,y,z = SuddenMotionSensor.values
+    puts "X: #{x}, Y: #{y}, Z: #{z}"
+    sleep 0.1
+  end
+
+That code will print out the X,Y and Z data 100 times.
+
+Data returned may be dependent on the model of Macbook you have and accelerometer part used.  For the 2009 Unibody Macbook 15-inch and data returned will be X and Y as a signed integer from -255 to +255 and Z as an indication of gravity (~262 average at rest).
+
+For X and Y axis, 0 indicated the unit is flat along the plane (either right-side-up or upside-down) and 255/-255 indicates 90-degree inclination.
+
+Methods:
+  
+  Values()
+    Returns (X, Y, Z)
+    Class method that returns an array of 3 signed integers indicating X Y and Z orientation.
+
+
+
