@@ -8,7 +8,7 @@ More Info: http://en.wikipedia.org/wiki/Sudden_Motion_Sensor
 
 Installation:
 
-  sudo gem install xunker-sudden_motion_sensor
+  sudo gem install sudden_motion_sensor
 
 Usage:
 
