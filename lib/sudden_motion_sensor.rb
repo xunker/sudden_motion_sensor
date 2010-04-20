@@ -44,7 +44,7 @@ class SuddenMotionSensor
           }  
   
           IOItemCount structureInputSize;  
-          IOByteCount structureOutputSize;  
+          size_t structureOutputSize;  
   
           struct data inputStructure;  
           struct data outputStructure;  
@@ -54,13 +54,13 @@ class SuddenMotionSensor
           memset(&inputStructure, 1, sizeof(inputStructure));  
           memset(&outputStructure, 0, sizeof(outputStructure));  
   
-          result = IOConnectMethodStructureIStructureO(  
-            dataPort,  
-            5,  
+          result = IOConnectCallStructMethod(  
+            (mach_port_t)dataPort,  
+            (uint32_t)5,  
+            (const void*)&inputStructure,
             structureInputSize,  
-            &structureOutputSize,  
-            &inputStructure,  
-            &outputStructure  
+            (void*)&outputStructure,
+            &structureOutputSize
           );  
   
           if(result != KERN_SUCCESS) {  
