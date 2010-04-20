@@ -2,9 +2,11 @@
 
 This gem reads data from the sudden motion sensor inside most Intel-based Macbooks and Macbook Pros and some late model Powerbooks.  Returns the data in a 3-axis array of integers representing orientation along the X and Y axis and relative acceleration along the Z axis.
 
+Big tutorial: http://n4k3d.com/blog/post/4/ruby_and_the_sudden_motion_sensor_tell_your_code_which_way_is_up/
+
 Based in part on code from http://fazibear.blogspot.com/2008/12/process-mac-sudden-motion-sensor-with.html.
 
-More Info: http://en.wikipedia.org/wiki/Sudden_Motion_Sensor
+More Basic Info: http://en.wikipedia.org/wiki/Sudden_Motion_Sensor
 
 Installation:
 
