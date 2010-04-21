@@ -79,8 +79,4 @@ class SuddenMotionSensor
       }  
     end  
   end  
-  def values
-    # returns [x,y,z] which are signed integers of the value of each axis.
-    super
-  end
 end

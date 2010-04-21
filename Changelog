@@ -1,2 +1,7 @@
-Version 1.0 - 2010-04-18
+Version 1.1.0 - 2010-04-21
+  * removed deprecated IO calls (Thanks C7!)
+  * removed silly duplicate "def values" in library
+  * changed gemspec platform to be just 'universal-darwin' from 'universal-darwin-9'
+
+Version 1.0.0 - 2010-04-18
   * Initial Release
