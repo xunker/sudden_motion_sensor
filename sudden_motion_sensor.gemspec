@@ -2,7 +2,7 @@ require 'rubygems'
 
 spec = Gem::Specification.new do |s| 
   s.name = "sudden_motion_sensor"
-  s.version = "1.0.0"
+  s.version = "1.1.0"
   s.date = %q{2010-04-16}
   s.author = "Matthew Nielsen"
   s.email = "xunker@pyxidis.org"
